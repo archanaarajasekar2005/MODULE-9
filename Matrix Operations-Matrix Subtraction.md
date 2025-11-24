@@ -22,9 +22,37 @@ To write a Python program that reads two matrices from the user and performs mat
 ---
 
 ## 💻 PROGRAM:
-ADD CODE HERE
+```
+def create_matrix(n, m):
+    matrix = []
+    for i in range(n):
+        row = []
+        for j in range(m):
+            val = int(input())
+            row.append(val)
+        matrix.append(row)
+    return matrix
+
+r = int(input())
+c = int(input())
+
+A = create_matrix(r, c)
+B = create_matrix(r, c)
+
+C = []
+for i in range(r):
+    row = []
+    for j in range(c):
+        row.append(A[i][j] - B[i][j])
+    C.append(row)
+
+for row in C:
+    print(*row)
+
+```
 
 ## OUTPUT:
+<img width="599" height="639" alt="446240765-4de928cd-b0b1-4fa7-ba05-1d2e95f0d3e6" src="https://github.com/user-attachments/assets/4f1b2f6a-9065-4cd1-9d9d-9c5bd8683273" />
 
 ## RESULT:
-
+Thus, the program is verified successfully.
